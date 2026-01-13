@@ -16,4 +16,17 @@ def is_palindrome(s: str) -> bool:
     Returns:
         bool: True if the string is a palindrome, False otherwise.
     """
-    return True
+    word = ""
+    for char in s:
+        if char.isalpha() or char.isdigit():
+            word += char.lower()
+
+    reverse_word = ""
+    for ch in word:
+        reverse_word = ch + reverse_word
+
+    if word == reverse_word:
+        return True
+    else: 
+        return False
+   
